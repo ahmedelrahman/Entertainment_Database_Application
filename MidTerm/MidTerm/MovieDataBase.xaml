@@ -1,0 +1,27 @@
+﻿<Window x:Class="MidTerm.MovieDataBase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MidTerm"
+        mc:Ignorable="d"
+        Title="MovieDataBase">
+
+    <DockPanel>
+        <ListView DockPanel.Dock="Top" Background="PaleTurquoise" x:Name="Games" ItemsSource="{Binding MainMoviesCollection}" HorizontalAlignment="Stretch" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Film" Width="75" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Genre" Width="90" DisplayMemberBinding="{Binding Genre}"/>
+                    <GridViewColumn Header="Lead Studio" Width="75" DisplayMemberBinding="{Binding Publisher}"/>
+                    <GridViewColumn Header="Audience score %" Width="75" DisplayMemberBinding="{Binding AudienceScore}"/>
+                    <GridViewColumn Header="Profitability" Width="90" DisplayMemberBinding="{Binding Other_Sales}"/>
+                    <GridViewColumn Header="Rotten Tomatoes %" Width="90" DisplayMemberBinding="{Binding RottenTomatoes}"/>
+                    <GridViewColumn Header="Worldwide Gross (Mill)" Width="75" DisplayMemberBinding="{Binding Global_Sales}"/>
+                    <GridViewColumn Header="Year" Width="75" DisplayMemberBinding="{Binding Year}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Window>
+
